@@ -145,9 +145,10 @@ Membutuhkan parameter id sebagai berikut:
 
 
 ## Bus API
-Note : Untuk POST dan PUT dibutuhkan struktur body sebagai berikut : 
+Note : Untuk PUT dibutuhkan struktur body sebagai berikut : 
 | Attributes  | Data Type |
 | ------------- | ------------- |
+| agencyId | Long  |
 | capacity  | Long  |
 | code  | String  |
 | make  | String  |
