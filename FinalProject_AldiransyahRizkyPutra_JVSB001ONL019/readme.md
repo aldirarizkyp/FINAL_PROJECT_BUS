@@ -456,7 +456,7 @@ Membutuhkan parameter id sebagai berikut:
 - Add Ticket
 ![App Screenshot](https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/blob/main/sesi_23_final_project/Screenshot/Postman/Ticket/Add%20ticket.png?raw=true)
 - Update Ticket
-![App Screenshot](https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/blob/main/sesi_23_final_project/Screenshot/Postman/Ticket/Update%20Ticket.png?raw=true)
+![App Screenshot](https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/blob/main/sesi_23_final_project/Screenshot/Postman/Ticket/UpdateTicket.png?raw=true)
 - Delete Ticket 
 ![App Screenshot](https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/blob/main/sesi_23_final_project/Screenshot/Postman/Ticket/Delete%20Ticket.png?raw=true)
 
