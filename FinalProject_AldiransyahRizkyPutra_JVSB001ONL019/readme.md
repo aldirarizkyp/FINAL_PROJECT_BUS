@@ -3,7 +3,7 @@
 
 - Nama          : Aldiransyah Rizky Putra
 - Kode Peserta  : JVSB001ONL019
-- Link GitHub   : https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/tree/main/sesi_23_final_project
+- Link GitHub   : https://github.com/aldirarizkyp/FINAL_PROJECT_BUS
 
 
 
