@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 03, 2022 at 07:07 PM
+-- Generation Time: Jul 03, 2022 at 08:21 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -171,7 +171,7 @@ CREATE TABLE `ticket` (
 
 INSERT INTO `ticket` (`id`, `cancellable`, `journey_date`, `seat_number`, `user_id`, `trip_schedule_id`) VALUES
 (1, b'1', '11-01-2022', 3, 1, 1),
-(2, b'1', '19-12-2021', 8, 3, 3),
+(2, b'1', '19-12-2021', 9, 3, 3),
 (3, b'1', '9-03-2022', 1, 4, 3),
 (16, b'1', '15-06-2022', 25, 2, 3),
 (17, b'1', '9-03-2022', 1, 4, 1),
