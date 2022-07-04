@@ -6,6 +6,12 @@
 - Link GitHub   : https://github.com/aldirarizkyp/FINAL_PROJECT_BUS
 
 
+## Struktur Readme
+- Deskripsi Singkat
+- Project Dependencies
+- How To Use (API Reference)
+- Screenshot Postman
+- Screenshot Swagger
 
 
 ### Deskripsi Singkat 
