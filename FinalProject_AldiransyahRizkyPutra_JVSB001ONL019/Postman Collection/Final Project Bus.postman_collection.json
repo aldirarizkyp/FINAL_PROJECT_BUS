@@ -19,7 +19,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"code\": \"LOM\",\r\n  \"details\": \"LOM-JKT\",\r\n  \"email\": \"aldira.putra@gmail.com\",\r\n  \"firstName\": \"Aldira\",\r\n  \"lastName\": \"Rizky\",\r\n  \"mobileNumber\": \"087755665566\",\r\n  \"name\": \"Aldira\",\r\n  \"password\": \"1234567890\",\r\n  \"role\": [\r\n    \"ROLE_ADMIN\"\r\n  ],\r\n  \"username\": \"aldira\"\r\n}",
+									"raw": "{\r\n  \"code\": \"LOM\",\r\n  \"details\": \"LOM-JKT\",\r\n  \"email\": \"awwwew@gmail.com\",\r\n  \"firstName\": \"Juhu\",\r\n  \"lastName\": \"Nona\",\r\n  \"mobileNumber\": \"08775543466\",\r\n  \"name\": \"Juhu\",\r\n  \"password\": \"1234567890\",\r\n  \"role\": [\r\n    \"ROLE_ADMIN\"\r\n  ],\r\n  \"username\": \"Juhu\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -38,6 +38,135 @@
 										"v1",
 										"user",
 										"signup"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All User",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{final_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"code\": \"LOM\",\r\n  \"details\": \"LOM-JKT\",\r\n  \"email\": \"aldira.putra@gmail.com\",\r\n  \"firstName\": \"Aldira\",\r\n  \"lastName\": \"Rizky\",\r\n  \"mobileNumber\": \"087755665566\",\r\n  \"name\": \"Aldira\",\r\n  \"password\": \"1234567890\",\r\n  \"role\": [\r\n    \"ROLE_ADMIN\"\r\n  ],\r\n  \"username\": \"aldira\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/user/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get User By ID",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{final_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"code\": \"LOM\",\r\n  \"details\": \"LOM-JKT\",\r\n  \"email\": \"aldira.putra@gmail.com\",\r\n  \"firstName\": \"Aldira\",\r\n  \"lastName\": \"Rizky\",\r\n  \"mobileNumber\": \"087755665566\",\r\n  \"name\": \"Aldira\",\r\n  \"password\": \"1234567890\",\r\n  \"role\": [\r\n    \"ROLE_ADMIN\"\r\n  ],\r\n  \"username\": \"aldira\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/user/6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete User",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{final_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"code\": \"LOM\",\r\n  \"details\": \"LOM-JKT\",\r\n  \"email\": \"aldira.putra@gmail.com\",\r\n  \"firstName\": \"Aldira\",\r\n  \"lastName\": \"Rizky\",\r\n  \"mobileNumber\": \"087755665566\",\r\n  \"name\": \"Aldira\",\r\n  \"password\": \"1234567890\",\r\n  \"role\": [\r\n    \"ROLE_ADMIN\"\r\n  ],\r\n  \"username\": \"aldira\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/user/7",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"7"
 									]
 								}
 							},
@@ -139,7 +268,7 @@
 									"bearer": [
 										{
 											"key": "token",
-											"value": "",
+											"value": "{{final_token}}",
 											"type": "string"
 										}
 									]
@@ -183,7 +312,7 @@
 									"bearer": [
 										{
 											"key": "token",
-											"value": "{{aldira_token_admin}}",
+											"value": "{{aldira_token_admin_baru}}",
 											"type": "string"
 										}
 									]
@@ -218,7 +347,7 @@
 									"bearer": [
 										{
 											"key": "token",
-											"value": "{{aldira_token_admin}}",
+											"value": "{{aldira_token_admin_baru}}",
 											"type": "string"
 										}
 									]
@@ -378,7 +507,7 @@
 									"bearer": [
 										{
 											"key": "token",
-											"value": "{{aldira_token_admin}}",
+											"value": "{{aldira_token_admin_baru}}",
 											"type": "string"
 										}
 									]
@@ -561,7 +690,7 @@
 									"bearer": [
 										{
 											"key": "token",
-											"value": "{{aldira_token_admin}}",
+											"value": "{{aldira_token_admin_baru}}",
 											"type": "string"
 										}
 									]
@@ -772,7 +901,7 @@
 									"bearer": [
 										{
 											"key": "token",
-											"value": "{{aldira_token_admin}}",
+											"value": "{{aldira_token_admin_baru}}",
 											"type": "string"
 										}
 									]
@@ -907,7 +1036,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"cancellable\": true,\r\n  \"journeyDate\": \"19-12-2021\",\r\n  \"passegerId\": 3,\r\n  \"seatNumber\": 8,\r\n  \"tripScheduleId\": 3\r\n}",
+									"raw": "{\r\n  \"cancellable\": true,\r\n  \"journeyDate\": \"19-12-2021\",\r\n  \"passegerId\": 3,\r\n  \"seatNumber\": 9,\r\n  \"tripScheduleId\": 3\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1159,7 +1288,7 @@
 									"bearer": [
 										{
 											"key": "token",
-											"value": "{{aldira_token_admin}}",
+											"value": "{{aldira_token_admin_baru}}",
 											"type": "string"
 										}
 									]
@@ -1338,6 +1467,14 @@
 		{
 			"key": "aldira_token_admin",
 			"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbGRpcmEiLCJpYXQiOjE2NTY4MjQ3ODQsImV4cCI6MTY1NjkxMTE4NH0.4oY1SsZdae976SmK99xvpqRSSPOVMZRxHmvwHpyV1T4m1pUCdUmr9WGYfDUYaeE-X1cxi5Y64tKLXAqI1W7tLg"
+		},
+		{
+			"key": "aldira_token_admin_baru",
+			"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbGRpcmEiLCJpYXQiOjE2NTY5MzAxMzAsImV4cCI6MTY1NzAxNjUzMH0.TYw35uC6XkR-TDmEwwoo86epu-x7GNm7czXO3W5nqTasX-kDtrMQKDDFajCULF9q7LzFW3mQah5_HKZ_EQIpQw"
+		},
+		{
+			"key": "final_token",
+			"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbGRpcmEiLCJpYXQiOjE2NTcwMjM0MDIsImV4cCI6MTY1NzEwOTgwMn0.yqTcIpq8FW5QJKE8deJH2ddY5g8Hs1_MG19bK2NgQOSakg2beNOn0D7NEUkW7uG6tLVCFfwV8Wl_1uJ96qrilw"
 		}
 	]
 }
