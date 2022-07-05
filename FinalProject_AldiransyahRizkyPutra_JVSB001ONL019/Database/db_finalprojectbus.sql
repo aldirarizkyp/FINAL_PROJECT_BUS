@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 03, 2022 at 08:21 PM
+-- Generation Time: Jul 05, 2022 at 02:24 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -46,7 +46,8 @@ INSERT INTO `agency` (`id`, `code`, `details`, `name`, `owner_user_id`) VALUES
 (4, 'JKT', 'JKT-LOM', 'Aldiransyah', 3),
 (7, 'LOM', 'LOM-JKT', 'Aldira', 6),
 (8, 'BBP', 'Jabodetabek', 'Black Bus Premium', 1),
-(9, 'MB', 'Jawa Barat - Jawa Tengah', 'Maroon Bus', 5);
+(9, 'MB', 'Jawa Barat - Jawa Tengah', 'Maroon Bus', 5),
+(10, 'LOM', 'LOM-JKT', 'Juhu', 7);
 
 -- --------------------------------------------------------
 
@@ -253,7 +254,6 @@ INSERT INTO `user` (`id`, `email`, `first_name`, `last_name`, `mobile_number`, `
 (2, 'messi@gmail.com', 'Lionel', 'Messi', '087766554433', '$2a$10$ATjMxBc/oK6s/Bf7bKxOreQTJR8BN6gcyV1NP0M7v54JiWRtNFmxe', 'lionelmessi'),
 (3, 'admin@gmail.com', 'Aldiransyah Rizky', 'Putra', '087765646554', '$2a$10$74jsjP/LWWbrhZHMXDWp4OHZOq1DYKgGT57rKCYQO4f3v9Q/9nrzu', 'admin'),
 (4, 'user@gmail.com', 'Kevin', 'DeBruyne', '0875677667567', '$2a$10$B7d8EDNY7Zzv.wuY7g8FW.Q09ySJlqrmfJ/ewJKFu9N6Ld27EniJ.', 'user'),
-(5, 'john@gmail.com', 'John', 'Doe', '081288997865', '$2a$10$ZMGGcMGBWWw.JO4c14wps.okLw7UPbGD9FImgH9xgAnEdeYUlgwh.', 'johndoe'),
 (6, 'aldira.putra@gmail.com', 'Aldira', 'Rizky', '087755665566', '$2a$10$WX2qvzfi4jESLDGjdImpdOX0ZYZsHQYHMEr609b4blQIw7YCx2cKS', 'aldira');
 
 -- --------------------------------------------------------
@@ -276,7 +276,6 @@ INSERT INTO `user_roles` (`user_id`, `role_id`) VALUES
 (2, 1),
 (3, 1),
 (4, 1),
-(5, 1),
 (6, 2);
 
 --
@@ -364,7 +363,7 @@ ALTER TABLE `user_roles`
 -- AUTO_INCREMENT for table `agency`
 --
 ALTER TABLE `agency`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `bus`
@@ -406,7 +405,7 @@ ALTER TABLE `trip_schedule`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
