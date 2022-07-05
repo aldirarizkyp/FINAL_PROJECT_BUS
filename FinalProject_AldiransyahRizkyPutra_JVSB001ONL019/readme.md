@@ -60,6 +60,19 @@ Note : Untuk POST dan PUT dibutuhkan struktur body sebagai berikut :
 | role  | String  |
 | username  | String  |
 
+### Get All User
+```http
+  GET http://localhost:8080/api/v1/user/
+```
+
+### Get User By ID
+```http
+  GET http://localhost:8080/api/v1/user/{id}
+```
+Membutuhkan parameter id sebagai berikut:
+| Attributes  | Data Type |
+| ------------- | ------------- |
+| id  | long  |
 
 ### Register User/SignUp
 
@@ -79,6 +92,15 @@ Membutuhkan parameter id sebagai berikut:
 ### UpdatePassword
 ```http
   PUT http://localhost:8080/api/v1/password/{id}
+```
+Membutuhkan parameter id sebagai berikut:
+| Attributes  | Data Type |
+| ------------- | ------------- |
+| id  | long  |
+
+### Delete User
+```http
+  DELETE http://localhost:8080/api/v1/user/{id}
 ```
 Membutuhkan parameter id sebagai berikut:
 | Attributes  | Data Type |
@@ -395,12 +417,18 @@ Membutuhkan parameter id sebagai berikut:
 ## Screenshots (Postman)
 
 ### User Screenshots
+- Get All User
+![App Screenshot](https://github.com/aldirarizkyp/FINAL_PROJECT_BUS/blob/main/FinalProject_AldiransyahRizkyPutra_JVSB001ONL019/Screenshot/Postman/User/Get%20All%20user.png?raw=true)
+- Get User By ID
+![App Screenshot](https://github.com/aldirarizkyp/FINAL_PROJECT_BUS/blob/main/FinalProject_AldiransyahRizkyPutra_JVSB001ONL019/Screenshot/Postman/User/Get%20User%20By%20ID.png?raw=true)
 - Register User
 ![App Screenshot](https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/blob/main/sesi_23_final_project/Screenshot/Postman/User/SignUpAsAdmin.png?raw=true)
 - Update User
 ![App Screenshot](https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/blob/main/sesi_23_final_project/Screenshot/Postman/User/UpdateUser.png?raw=true)
 - Update Password
 ![App Screenshot](https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/blob/main/sesi_23_final_project/Screenshot/Postman/User/UpdatePassword.png?raw=true)
+- Delete User
+![App Screenshot](https://github.com/aldirarizkyp/FINAL_PROJECT_BUS/blob/main/FinalProject_AldiransyahRizkyPutra_JVSB001ONL019/Screenshot/Postman/User/Delete%20User.png?raw=true)
 
 ### Auth Screenshots
 - Login/Authentication
@@ -482,88 +510,94 @@ Membutuhkan parameter id sebagai berikut:
 ## Screenshot (Swagger)
 
 ### User Screenshots
+- Get All User
+![App Screenshot](https://github.com/aldirarizkyp/FINAL_PROJECT_BUS/blob/main/FinalProject_AldiransyahRizkyPutra_JVSB001ONL019/Screenshot/Swagger/User/Get%20All%20user.png?raw=true)
+- Get User By ID
+![App Screenshot](https://github.com/aldirarizkyp/FINAL_PROJECT_BUS/blob/main/FinalProject_AldiransyahRizkyPutra_JVSB001ONL019/Screenshot/Swagger/User/Get%20User%20By%20ID.png?raw=true)
 - Register User
-![App Screenshot](https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/blob/main/sesi_23_final_project/Screenshot/Swagger/User/Sign%20Up%20(JohnDoe)%20Role%20User.png?raw=true)
+![App Screenshot](https://github.com/aldirarizkyp/FINAL_PROJECT_BUS/blob/main/FinalProject_AldiransyahRizkyPutra_JVSB001ONL019/Screenshot/Swagger/User/Sign%20Up.png?raw=true)
 - Update User
-![App Screenshot](https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/blob/main/sesi_23_final_project/Screenshot/Swagger/User/Update%20User.png?raw=true)
+![App Screenshot](https://github.com/aldirarizkyp/FINAL_PROJECT_BUS/blob/main/FinalProject_AldiransyahRizkyPutra_JVSB001ONL019/Screenshot/Swagger/User/Update%20User.png?raw=true)
 - Update Password
-![App Screenshot](https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/blob/main/sesi_23_final_project/Screenshot/Swagger/User/Update%20Password.png?raw=true)
+![App Screenshot](https://github.com/aldirarizkyp/FINAL_PROJECT_BUS/blob/main/FinalProject_AldiransyahRizkyPutra_JVSB001ONL019/Screenshot/Swagger/User/Update%20Password.png?raw=true)
+- Delete User
+![App Screenshot](https://github.com/aldirarizkyp/FINAL_PROJECT_BUS/blob/main/FinalProject_AldiransyahRizkyPutra_JVSB001ONL019/Screenshot/Swagger/User/Delete%20User.png?raw=true)
 
 ### Auth Screenshots
 - Login/Authentication
-![App Screenshot](https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/blob/main/sesi_23_final_project/Screenshot/Swagger/Auth/Auth%20as%20John%20Doe%20(with%20new%20password).png?raw=true)
+![App Screenshot](https://github.com/aldirarizkyp/FINAL_PROJECT_BUS/blob/main/FinalProject_AldiransyahRizkyPutra_JVSB001ONL019/Screenshot/Swagger/Auth/Auth.png?raw=true)
 
 ### Agency Screenshots
 - Get All Agency
-![App Screenshot](https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/blob/main/sesi_23_final_project/Screenshot/Swagger/Agency/Get%20All%20Agency.png?raw=true)
+![App Screenshot](https://github.com/aldirarizkyp/FINAL_PROJECT_BUS/blob/main/FinalProject_AldiransyahRizkyPutra_JVSB001ONL019/Screenshot/Swagger/Agency/Get%20All%20Agency.png?raw=true)
 - Get Agency By ID
-![App Screenshot](https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/blob/main/sesi_23_final_project/Screenshot/Swagger/Agency/Get%20Agency%20By%20ID.png?raw=true)
+![App Screenshot](https://github.com/aldirarizkyp/FINAL_PROJECT_BUS/blob/main/FinalProject_AldiransyahRizkyPutra_JVSB001ONL019/Screenshot/Swagger/Agency/Get%20Agency%20By%20ID.png?raw=true)
 - Add Agency
-![App Screenshot](https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/blob/main/sesi_23_final_project/Screenshot/Swagger/Agency/Add%20Agency.png?raw=true)
+![App Screenshot](https://github.com/aldirarizkyp/FINAL_PROJECT_BUS/blob/main/FinalProject_AldiransyahRizkyPutra_JVSB001ONL019/Screenshot/Swagger/Agency/Add%20Agency.png?raw=true)
 - Update Agency
-![App Screenshot](https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/blob/main/sesi_23_final_project/Screenshot/Swagger/Agency/Update%20Agency.png?raw=true)
+![App Screenshot](https://github.com/aldirarizkyp/FINAL_PROJECT_BUS/blob/main/FinalProject_AldiransyahRizkyPutra_JVSB001ONL019/Screenshot/Swagger/Agency/Update%20Agency.png?raw=true)
 - Delete Agency
-![App Screenshot](https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/blob/main/sesi_23_final_project/Screenshot/Swagger/Agency/delete%20agency.png?raw=true)
+![App Screenshot](https://github.com/aldirarizkyp/FINAL_PROJECT_BUS/blob/main/FinalProject_AldiransyahRizkyPutra_JVSB001ONL019/Screenshot/Swagger/Agency/delete%20agency.png?raw=true)
 
 ### Bus Screenshots
 - Get All Bus
-![App Screenshot](https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/blob/main/sesi_23_final_project/Screenshot/Swagger/Bus/Get%20All%20Bus.png?raw=true)
+![App Screenshot](https://github.com/aldirarizkyp/FINAL_PROJECT_BUS/blob/main/FinalProject_AldiransyahRizkyPutra_JVSB001ONL019/Screenshot/Swagger/Bus/Get%20All%20Bus.png?raw=true)
 - Get Bus By Agency ID
-![App Screenshot](https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/blob/main/sesi_23_final_project/Screenshot/Swagger/Bus/Get%20Bus%20by%20Agency%20ID.png?raw=true)
+![App Screenshot](https://github.com/aldirarizkyp/FINAL_PROJECT_BUS/blob/main/FinalProject_AldiransyahRizkyPutra_JVSB001ONL019/Screenshot/Swagger/Bus/Get%20Bus%20by%20Agency%20ID.png?raw=true)
 - Add Bus By Agency ID
-![App Screenshot](https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/blob/main/sesi_23_final_project/Screenshot/Swagger/Bus/Add%20Bus%20By%20Agency.png?raw=true)
+![App Screenshot](https://github.com/aldirarizkyp/FINAL_PROJECT_BUS/blob/main/FinalProject_AldiransyahRizkyPutra_JVSB001ONL019/Screenshot/Swagger/Bus/Add%20Bus%20By%20Agency.png?raw=true)
 - Update Bus By Agency ID
-![App Screenshot](https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/blob/main/sesi_23_final_project/Screenshot/Swagger/Bus/UpdateBusByAgencyID.png?raw=true)
+![App Screenshot](https://github.com/aldirarizkyp/FINAL_PROJECT_BUS/blob/main/FinalProject_AldiransyahRizkyPutra_JVSB001ONL019/Screenshot/Swagger/Bus/Update%20Bus%20By%20Agency%20ID.png?raw=true)
 - Delete Bus
-![App Screenshot](https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/blob/main/sesi_23_final_project/Screenshot/Swagger/Bus/Delete%20Bus.png?raw=true)
+![App Screenshot](https://github.com/aldirarizkyp/FINAL_PROJECT_BUS/blob/main/FinalProject_AldiransyahRizkyPutra_JVSB001ONL019/Screenshot/Swagger/Bus/Delete%20Bus.png?raw=true)
 
 ### Trip Schedule Screenshots
 - Get All Trip Schedule
-![App Screenshot](https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/blob/main/sesi_23_final_project/Screenshot/Swagger/Trip%20Schedule/Get%20All%20Trip%20Schedule.png?raw=true)
+![App Screenshot](https://github.com/aldirarizkyp/FINAL_PROJECT_BUS/blob/main/FinalProject_AldiransyahRizkyPutra_JVSB001ONL019/Screenshot/Swagger/Trip%20Schedule/Get%20All%20Trip%20Schedule.png?raw=true)
 - Get Trip Schedule By ID
-![App Screenshot](https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/blob/main/sesi_23_final_project/Screenshot/Swagger/Trip%20Schedule/Get%20Trip%20Schedule%20By%20ID.png?raw=true)
+![App Screenshot](https://github.com/aldirarizkyp/FINAL_PROJECT_BUS/blob/main/FinalProject_AldiransyahRizkyPutra_JVSB001ONL019/Screenshot/Swagger/Trip%20Schedule/Get%20Trip%20Schedule%20By%20ID.png?raw=true)
 - Add Trip Schedule
-![App Screenshot](https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/blob/main/sesi_23_final_project/Screenshot/Swagger/Trip%20Schedule/Add%20Trip%20Schedule.png?raw=true)
+![App Screenshot](https://github.com/aldirarizkyp/FINAL_PROJECT_BUS/blob/main/FinalProject_AldiransyahRizkyPutra_JVSB001ONL019/Screenshot/Swagger/Trip%20Schedule/Add%20Trip%20Schedule.png?raw=true)
 - Update Trip Schedule
-![App Screenshot](https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/blob/main/sesi_23_final_project/Screenshot/Swagger/Trip%20Schedule/Update%20Trip%20Schedule.png?raw=true)
+![App Screenshot](https://github.com/aldirarizkyp/FINAL_PROJECT_BUS/blob/main/FinalProject_AldiransyahRizkyPutra_JVSB001ONL019/Screenshot/Swagger/Trip%20Schedule/Update%20Trip%20Schedule.png?raw=true)
 - Delete Trip Schedule
-![App Screenshot](https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/blob/main/sesi_23_final_project/Screenshot/Swagger/Trip%20Schedule/Delete%20Trip%20Schedule.png?raw=true)
+![App Screenshot](https://github.com/aldirarizkyp/FINAL_PROJECT_BUS/blob/main/FinalProject_AldiransyahRizkyPutra_JVSB001ONL019/Screenshot/Swagger/Trip%20Schedule/Delete%20Trip%20Schedule.png?raw=true)
 
 ### Trip Screenshots
 - Get All Trip 
-![App Screenshot](https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/blob/main/sesi_23_final_project/Screenshot/Swagger/Trip/Get%20All%20trip.png?raw=true)
+![App Screenshot](https://github.com/aldirarizkyp/FINAL_PROJECT_BUS/blob/main/FinalProject_AldiransyahRizkyPutra_JVSB001ONL019/Screenshot/Swagger/Trip/Get%20All%20trip.png?raw=true)
 - Get Trip By Agency ID
-![App Screenshot](https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/blob/main/sesi_23_final_project/Screenshot/Swagger/Trip/GEt%20Trip%20By%20Agency%20ID.png?raw=true)
+![App Screenshot](https://github.com/aldirarizkyp/FINAL_PROJECT_BUS/blob/main/FinalProject_AldiransyahRizkyPutra_JVSB001ONL019/Screenshot/Swagger/Trip/GEt%20Trip%20By%20Agency%20ID.png?raw=true)
 - Add Trip 
-![App Screenshot](https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/blob/main/sesi_23_final_project/Screenshot/Swagger/Trip/Add%20Trip.png?raw=true)
+![App Screenshot](https://github.com/aldirarizkyp/FINAL_PROJECT_BUS/blob/main/FinalProject_AldiransyahRizkyPutra_JVSB001ONL019/Screenshot/Swagger/Trip/Add%20Trip.png?raw=true)
 - Update Trip 
-![App Screenshot](https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/blob/main/sesi_23_final_project/Screenshot/Swagger/Trip/Update%20Trip.png?raw=true)
+![App Screenshot](https://github.com/aldirarizkyp/FINAL_PROJECT_BUS/blob/main/FinalProject_AldiransyahRizkyPutra_JVSB001ONL019/Screenshot/Swagger/Trip/Update%20Trip.png?raw=true)
 - Delete Trip 
-![App Screenshot](https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/blob/main/sesi_23_final_project/Screenshot/Swagger/Trip/Delete%20Trip.png?raw=true)
+![App Screenshot](https://github.com/aldirarizkyp/FINAL_PROJECT_BUS/blob/main/FinalProject_AldiransyahRizkyPutra_JVSB001ONL019/Screenshot/Swagger/Trip/Delete%20Trip.png?raw=true)
 
 ### Ticket Screenshots
 - Get All Ticket
-![App Screenshot](https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/blob/main/sesi_23_final_project/Screenshot/Swagger/Ticket/Get%20All%20Ticket.png?raw=true)
+![App Screenshot](https://github.com/aldirarizkyp/FINAL_PROJECT_BUS/blob/main/FinalProject_AldiransyahRizkyPutra_JVSB001ONL019/Screenshot/Swagger/Ticket/Get%20All%20Ticket.png?raw=true)
 - Get Ticket By ID
-![App Screenshot](https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/blob/main/sesi_23_final_project/Screenshot/Swagger/Ticket/Get%20Ticket%20By%20ID.png?raw=true)
+![App Screenshot](https://github.com/aldirarizkyp/FINAL_PROJECT_BUS/blob/main/FinalProject_AldiransyahRizkyPutra_JVSB001ONL019/Screenshot/Swagger/Ticket/Get%20Ticket%20By%20ID.png?raw=true)
 - Add Ticket
-![App Screenshot](https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/blob/main/sesi_23_final_project/Screenshot/Swagger/Ticket/Add%20Ticket.png?raw=true)
+![App Screenshot](https://github.com/aldirarizkyp/FINAL_PROJECT_BUS/blob/main/FinalProject_AldiransyahRizkyPutra_JVSB001ONL019/Screenshot/Swagger/Ticket/Add%20Ticket.png?raw=true)
 - Update Ticket
-![App Screenshot](https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/blob/main/sesi_23_final_project/Screenshot/Swagger/Ticket/UpdateTicket.png?raw=true)
+![App Screenshot](https://github.com/aldirarizkyp/FINAL_PROJECT_BUS/blob/main/FinalProject_AldiransyahRizkyPutra_JVSB001ONL019/Screenshot/Swagger/Ticket/Update%20Ticket.png?raw=true)
 - Delete Ticket 
-![App Screenshot](https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/blob/main/sesi_23_final_project/Screenshot/Swagger/Ticket/Delete%20Ticket.png?raw=true)
+![App Screenshot](https://github.com/aldirarizkyp/FINAL_PROJECT_BUS/blob/main/FinalProject_AldiransyahRizkyPutra_JVSB001ONL019/Screenshot/Swagger/Ticket/Delete%20Ticket.png?raw=true)
 
 
 ### Stop Screenshots
 - Get All Stop
-![App Screenshot](https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/blob/main/sesi_23_final_project/Screenshot/Swagger/Stop/Get%20All%20Stop.png?raw=true)
+![App Screenshot](https://github.com/aldirarizkyp/FINAL_PROJECT_BUS/blob/main/FinalProject_AldiransyahRizkyPutra_JVSB001ONL019/Screenshot/Swagger/Stop/Get%20All%20Stop.png?raw=true)
 - Get Stop By ID
-![App Screenshot](https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/blob/main/sesi_23_final_project/Screenshot/Swagger/Stop/Get%20Stop%20By%20ID.png?raw=true)
+![App Screenshot](https://github.com/aldirarizkyp/FINAL_PROJECT_BUS/blob/main/FinalProject_AldiransyahRizkyPutra_JVSB001ONL019/Screenshot/Swagger/Stop/Get%20Stop%20By%20ID.png?raw=true)
 - Get Stop By Code
-![App Screenshot](https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/blob/main/sesi_23_final_project/Screenshot/Swagger/Stop/Get%20Stop%20by%20Code.png?raw=true)
+![App Screenshot](https://github.com/aldirarizkyp/FINAL_PROJECT_BUS/blob/main/FinalProject_AldiransyahRizkyPutra_JVSB001ONL019/Screenshot/Swagger/Stop/Get%20Stop%20by%20Code.png?raw=true)
 - Get Stop By Name
-![App Screenshot](https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/blob/main/sesi_23_final_project/Screenshot/Swagger/Stop/Get%20Stop%20By%20Name.png?raw=true)
+![App Screenshot](https://github.com/aldirarizkyp/FINAL_PROJECT_BUS/blob/main/FinalProject_AldiransyahRizkyPutra_JVSB001ONL019/Screenshot/Swagger/Stop/Get%20Stop%20By%20Name.png?raw=true)
 - Add Stop
-![App Screenshot](https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/blob/main/sesi_23_final_project/Screenshot/Swagger/Stop/Add%20Stop.png?raw=true)
+![App Screenshot](https://github.com/aldirarizkyp/FINAL_PROJECT_BUS/blob/main/FinalProject_AldiransyahRizkyPutra_JVSB001ONL019/Screenshot/Swagger/Stop/Add%20Stop.png?raw=true)
 - Delete Stop
-![App Screenshot](https://github.com/aldirarizkyp/Belajar_Springboot_Hacktiv8/blob/main/sesi_23_final_project/Screenshot/Swagger/Stop/Delete%20Stop.png?raw=true)
+![App Screenshot](https://github.com/aldirarizkyp/FINAL_PROJECT_BUS/blob/main/FinalProject_AldiransyahRizkyPutra_JVSB001ONL019/Screenshot/Swagger/Stop/Delete%20Stop.png?raw=true)
