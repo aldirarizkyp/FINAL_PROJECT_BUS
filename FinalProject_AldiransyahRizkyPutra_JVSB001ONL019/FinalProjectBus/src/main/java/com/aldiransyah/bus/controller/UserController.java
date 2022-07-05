@@ -1,6 +1,8 @@
 package com.aldiransyah.bus.controller;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import javax.validation.Valid;
@@ -22,6 +24,7 @@ import com.aldiransyah.bus.model.Agency;
 import com.aldiransyah.bus.model.ERole;
 import com.aldiransyah.bus.model.Role;
 import com.aldiransyah.bus.model.User;
+import com.aldiransyah.bus.payload.request.AgencyRequest;
 import com.aldiransyah.bus.payload.request.SignupCustomRequest;
 import com.aldiransyah.bus.payload.request.UserCustomRequest;
 import com.aldiransyah.bus.payload.request.UserPasswordRequest;
@@ -32,6 +35,8 @@ import com.aldiransyah.bus.repository.UserRepository;
 import com.aldiransyah.bus.security.jwt.JwtUtils;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.Authorization;
@@ -58,6 +63,18 @@ public class UserController {
 
 	@Autowired
 	JwtUtils jwtUtils;
+	
+	@GetMapping("/")
+	@ApiOperation(value = "", authorizations = { @Authorization(value = "apiKey") })
+	@PreAuthorize("hasAnyRole('ADMIN','USER')")
+	public ResponseEntity<?> getAll() {
+		List<UserCustomRequest> dataArrResult = new ArrayList<>();
+		for (User dataArr : userRepository.findAll()) {
+			dataArrResult.add(new UserCustomRequest(dataArr.getFirstName(), dataArr.getLastName(),
+					dataArr.getMobileNumber()));
+		}
+		return ResponseEntity.ok(new MessageResponse<UserCustomRequest>(true, "Success Retrieving Data", dataArrResult));
+	}
 
 	@PostMapping("/signup")
 	public ResponseEntity<?> registerUser(@Valid @RequestBody SignupCustomRequest signupCustomRequest) {
@@ -140,5 +157,37 @@ public class UserController {
 		User updatedUser = userRepository.save(user);
 
 		return ResponseEntity.ok(updatedUser);
+	}
+	
+	@GetMapping("/{id}")
+	@ApiOperation(value = "", authorizations = { @Authorization(value = "apiKey") })
+	@PreAuthorize("hasRole('ADMIN')")
+	public ResponseEntity<?> getUserById(@PathVariable(value = "id") Long id) {
+		User user = userRepository.findById(id).get();
+		if (user == null) {
+			return ResponseEntity.notFound().build();
+		} else {
+			UserCustomRequest dataResult = new UserCustomRequest(user.getFirstName(), user.getLastName(),
+					user.getMobileNumber());
+			return ResponseEntity.ok(new MessageResponse<UserCustomRequest>(true, "Success Retrieving Data", dataResult));
+		}
+	}
+	
+	@DeleteMapping("/{id}")
+	@ApiOperation(value = "", authorizations = { @Authorization(value = "apiKey") })
+	@PreAuthorize("hasRole('ADMIN')")
+	public ResponseEntity<?> deleteUser(@PathVariable(value = "id") Long id) {
+		String result = "";
+		try {
+			userRepository.findById(id).get();
+
+			result = "Success Deleting Data with Id: " + id;
+			userRepository.deleteById(id);
+
+			return ResponseEntity.ok(new MessageResponse<User>(true, result));
+		} catch (Exception e) {
+			result = "Data with Id: " + id + " Not Found";
+			return ResponseEntity.ok(new MessageResponse<User>(false, result));
+		}
 	}
 }
